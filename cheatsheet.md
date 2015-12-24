@@ -2,4 +2,4 @@
 
 ## Plugins related
 ### NERDTree
-* Toggle NerdTree: <C - n>
+* Toggle NerdTree: \<C - n\>
