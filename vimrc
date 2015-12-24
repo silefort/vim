@@ -1,4 +1,5 @@
 """" Utils
+""" Display Options
 "" Syntaxic coloration
 syntax on
 
@@ -10,6 +11,13 @@ set number
 
 "" dark background
 set background=dark
+
+""" Insert Options
+" insert spaces for tab (to insert real tabs use <C - V><tab>
+set expandtab
+" one tab = 4 spaces
+set tabstop=4
+set shiftwidth=4
 
 "" Not case sensitive for /search
 set ignorecase
