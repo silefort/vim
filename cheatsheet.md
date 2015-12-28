@@ -18,6 +18,10 @@
 ## Windows
     \<C - w\> + h/j/k/l # To Window (with direction)
     \<C - w\> + w   # To next Window 
+    
+## Buffers
+    ,b  # Next Buffer
+    :ls # List Buffers
 
 ## Plugins related
 ### NERDTree
