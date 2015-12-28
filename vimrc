@@ -34,6 +34,9 @@ set ignorecase
 """" Nagivation Options
 """""""""""""""""""
 
+"" Set Mapleader
+let mapleader = ","
+
 "" Disable Arrows for all mode
 inoremap  <Up>     <NOP>
 inoremap  <Down>   <NOP>
@@ -44,8 +47,8 @@ noremap   <Down>   <NOP>
 noremap   <Left>   <NOP>
 noremap   <Right>  <NOP>
 
-"" Set Mapleader
-let mapleader = ","
+"" Next Buffer
+map <Leader>b :bn<cr>
 
 """""""""""""""""""
 """" Nagivation Options
