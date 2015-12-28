@@ -1,5 +1,9 @@
 """" Utils
+
+"""""""""""""""""""
 """ Display Options
+"""""""""""""""""""
+
 "" Syntaxic coloration
 syntax on
 
@@ -12,7 +16,10 @@ set number
 "" dark background
 set background=dark
 
+"""""""""""""""""""
 """ Insert Options
+"""""""""""""""""""
+
 " insert spaces for tab (to insert real tabs use <C - V><tab>
 set expandtab
 " one tab = 4 spaces
@@ -22,7 +29,35 @@ set shiftwidth=4
 "" Not case sensitive for /search
 set ignorecase
 
+
+"""""""""""""""""""
+"""" Nagivation Options
+"""""""""""""""""""
+
+"" Disable Arrows for all mode
+inoremap  <Up>     <NOP>
+inoremap  <Down>   <NOP>
+inoremap  <Left>   <NOP>
+inoremap  <Right>  <NOP>
+noremap   <Up>     <NOP>
+noremap   <Down>   <NOP>
+noremap   <Left>   <NOP>
+noremap   <Right>  <NOP>
+
+"" Set Mapleader
+let mapleader = ","
+
+"""""""""""""""""""
+"""" Nagivation Options
+"""""""""""""""""""
+
+"" Map write to leader s
+map <Leader>s :w<cr>
+
+"""""""""""""""""""
 """" Pathogen
+"""""""""""""""""""
+
 execute pathogen#infect()
 
 " any plugins you wish to install can be extracted to a subdirectory under
@@ -31,7 +66,10 @@ execute pathogen#infect()
 " cd ~/.vim/bundle
 " git clone https://github.com/scrooloose/nerdtree.git
 
+"""""""""""""""""""
 """ NERDTree
+"""""""""""""""""""
+
 " Remap Ctrl + n to open/close the NERDTree Tab
 map <C-n> :NERDTreeToggle<CR>
 
