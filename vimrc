@@ -64,6 +64,9 @@ map <Leader>b :bn<cr>
 """" Pathogen
 """""""""""""""""""
 
+"" set the runtime path to my custom_vim dir
+set rtp+=~/.custom_vim
+
 execute pathogen#infect()
 
 " any plugins you wish to install can be extracted to a subdirectory under
