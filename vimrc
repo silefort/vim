@@ -47,8 +47,7 @@ noremap   <Down>   <NOP>
 noremap   <Left>   <NOP>
 noremap   <Right>  <NOP>
 
-"" Next Buffer
-map <Leader>b :bn<cr>
+imap jj <ESC>
 
 """""""""""""""""""
 """" Nagivation Options
