@@ -47,6 +47,7 @@ noremap   <Down>   <NOP>
 noremap   <Left>   <NOP>
 noremap   <Right>  <NOP>
 
+"" jj to escape
 imap jj <ESC>
 
 """""""""""""""""""
