@@ -8,4 +8,5 @@ Vim conf and Cheatsheet
 
 # Setup
 Add this to you bashrc:
+    
     alias v='vim -Nu ~/.custom_vim/vimrc'
