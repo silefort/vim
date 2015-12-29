@@ -50,11 +50,14 @@ noremap   <Right>  <NOP>
 imap jj <ESC>
 
 """""""""""""""""""
-"""" Nagivation Options
+"""" Buffer Options
 """""""""""""""""""
 
 "" Map write to leader s
 map <Leader>s :w<cr>
+
+"" Next Buffer
+map <Leader>b :bn<cr>
 
 """""""""""""""""""
 """" Pathogen
