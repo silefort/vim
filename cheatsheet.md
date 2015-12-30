@@ -1,5 +1,10 @@
 # VIM CheatSheet
 
+## Edit
+
+    t   # Insert blank line below
+    T   # Insert blank line above
+
 ## Move on the current line
 ### Search for characters
     f{char}     # Go to the next occurence of char
@@ -26,14 +31,25 @@
     * # Go to the next occurence of the word under the cursor
     # # Go to the previous occurence of the word under the cursor
     n or N # Go to the next (or previous) occurence of the searched <string>
+    
+
+## Tools
+
+    ,;      # Search and replace word under the cursor
+    ,a      # Select all text in current buffer
+    < or >  # Indent / Outdent
+    =       # Auto Indent
+    jj      # In insert mode, escape
 
 ## Windows
-    \<C - w\> + h/j/k/l # To Window (with direction)
-    \<C - w\> + w       # To next Window 
+    <C - h/j/k/l>   # To Window (with direction)
+    <C - w> + w     # To next Window 
     
 ## Buffers
     ,b                      # Next Buffer
+    <left> or <right>       # Previous/Next Buffer
     :ls                     # List Buffers
+    ,s                      # equivalent to :w
     :saveas <path/to/file>  # save current buffer to <path/to/file>
     ZZ                      # save and quit, equivalent to :wq
     
@@ -42,4 +58,4 @@
 
 ## Plugins related
 ### NERDTree
-    \<C - n\> # Toggle NerdTree
+    <C - n> # Toggle NerdTree
