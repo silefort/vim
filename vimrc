@@ -1,36 +1,6 @@
 """" Utils
 
 """""""""""""""""""
-""" Display Options
-"""""""""""""""""""
-
-"" Syntaxic coloration
-syntax on
-
-"" Show the current command (like 2dd)
-set showcmd
-
-"" Show the lines number
-set number
-
-"" dark background
-set background=dark
-
-"""""""""""""""""""
-""" Insert Options
-"""""""""""""""""""
-
-" insert spaces for tab (to insert real tabs use <C - V><tab>
-set expandtab
-" one tab = 4 spaces
-set tabstop=4
-set shiftwidth=4
-
-"" Not case sensitive for /search
-set ignorecase
-
-
-"""""""""""""""""""
 """" Nagivation Options
 """""""""""""""""""
 
@@ -50,6 +20,74 @@ noremap   <Right>  <NOP>
 "" jj to escape
 imap jj <ESC>
 
+"" Easy split navigation
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
+
+"" Use arrow key to change buffer
+noremap <left> :bp<CR>
+noremap <right> :bn<CR>
+
+"""""""""""""""""""
+""" Display Options
+"""""""""""""""""""
+
+"" Syntaxic coloration
+syntax on
+
+"" Show the current command (like 2dd)
+set showcmd
+
+"" Show the lines number
+set number
+
+"" dark background
+set background=dark
+
+"" Highlight all search matches
+set hlsearch
+
+"" Only have cursorline in current Window
+set cursorline
+autocmd WinLeave * set nocursorline
+autocmd WinEnter * set cursorline
+
+"" Informative Status Line
+set statusline=%F%m%r%h%w\ [type=%Y]\ [%p%%]\ [len=%L]
+set laststatus=2 " Always show the statusline on the 2nd last row
+
+"""""""""""""""""""
+""" Insert Options
+"""""""""""""""""""
+
+" insert spaces for tab (to insert real tabs use <C - V><tab>
+set expandtab
+
+" one tab = 4 spaces
+set tabstop=4
+set shiftwidth=4
+
+"" Not case sensitive for /search
+set ignorecase
+
+"" reselect visual block after indent/outdent
+vnoremap < <gv
+vnoremap > >gv
+
+"" Select all text in current buffer
+map <Leader>a ggVG
+
+"" Insert blank lines without going into insert mode
+nmap t o<ESC>k
+nmap T O<ESC>j
+
+"" Auto close parentheses, brackets and braces
+"" imap { {}<left>
+"" imap ( ()<left>
+"" imap [ []<left>
+ 
 """""""""""""""""""
 """" Buffer Options
 """""""""""""""""""
@@ -59,6 +97,14 @@ map <Leader>s :w<cr>
 
 "" Next Buffer
 map <Leader>b :bn<cr>
+
+"""""""""""""""""""
+"""" Tools Options
+"""""""""""""""""""
+
+"" Search & Replace word under cursor
+:nnoremap <leader>; :%s/\<<C-r><C-w>\>//<Left>
+
 
 """""""""""""""""""
 """" Pathogen
