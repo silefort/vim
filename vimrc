@@ -18,7 +18,7 @@ noremap   <Left>   <NOP>
 noremap   <Right>  <NOP>
 
 "" jj to escape
-imap jj <ESC>
+imap jj <ESC>l
 
 "" Easy split navigation
 nnoremap <C-h> <C-w>h
