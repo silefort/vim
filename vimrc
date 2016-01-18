@@ -17,18 +17,15 @@ noremap   <Down>   <NOP>
 noremap   <Left>   <NOP>
 noremap   <Right>  <NOP>
 
-"" jj to escape
-imap jj <ESC>
+"" jj to escape + leave the cursor
+"" where it is (don't go one column back )
+imap jj <ESC>l
 
 "" Easy split navigation
 nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
-
-"" Use arrow key to change buffer
-noremap <left> :bp<CR>
-noremap <right> :bn<CR>
 
 """""""""""""""""""
 """ Display Options
@@ -43,11 +40,20 @@ set showcmd
 "" Show the lines number
 set number
 
-"" dark background
+"" Show the matching paranthesis
+set showmatch
+
+"" Dark background
 set background=dark
 
 "" Highlight all search matches
 set hlsearch
+
+"" Incremental search
+set incsearch
+
+"" Clean the search highlights
+nmap <silent> ,/ :nohlsearch<CR>
 
 "" Only have cursorline in current Window
 set cursorline
@@ -87,10 +93,16 @@ nmap T O<ESC>j
 "" imap { {}<left>
 "" imap ( ()<left>
 "" imap [ []<left>
+
+"" Allow backspacing over everything
+set backspace=indent,eol,start
  
 """""""""""""""""""
 """" Buffer Options
 """""""""""""""""""
+
+"" You don't have to save a buffer before opening another
+set hidden
 
 "" Map write to leader s
 map <Leader>s :w<cr>
@@ -105,6 +117,8 @@ map <Leader>b :bn<cr>
 "" Search & Replace word under cursor
 :nnoremap <leader>; :%s/\<<C-r><C-w>\>//<Left>
 
+"" Save as Sudo
+cmap w!! w !sudo tee % >/dev/null
 
 """""""""""""""""""
 """" Pathogen
