@@ -17,12 +17,8 @@ noremap   <Down>   <NOP>
 noremap   <Left>   <NOP>
 noremap   <Right>  <NOP>
 
-<<<<<<< HEAD
 "" jj to escape + leave the cursor
 "" where it is (don't go one column back )
-=======
-"" jj to escape
->>>>>>> fd1fe5d7670ca8d248af0c168a076c7044471558
 imap jj <ESC>l
 
 "" Easy split navigation
