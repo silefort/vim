@@ -96,6 +96,9 @@ nmap T O<ESC>j
 
 "" Allow backspacing over everything
 set backspace=indent,eol,start
+
+"" Make Y act like C and D (copy till the end of the line)
+nmap Y y$
  
 """""""""""""""""""
 """" Buffer Options
