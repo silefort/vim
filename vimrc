@@ -27,6 +27,10 @@ nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
+" Use shift-H and shift-L for move to beginning/end
+nnoremap H 0
+nnoremap L $
+
 """""""""""""""""""
 """ Display Options
 """""""""""""""""""
@@ -100,6 +104,11 @@ set backspace=indent,eol,start
 "" Make Y act like C and D (copy till the end of the line)
 nmap Y y$
  
+" Use ,d (or ,dd or ,dj or 20,dd) to delete a line without adding it to the
+" yanked stack (also, in visual mode)
+nnoremap <silent> <leader>d "_d
+vnoremap <silent> <leader>d "_d
+
 """""""""""""""""""
 """" Buffer Options
 """""""""""""""""""
