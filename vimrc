@@ -98,6 +98,11 @@ nmap T O<ESC>j
 "" imap ( ()<left>
 "" imap [ []<left>
 
+"" Auto insert closing parantheses, brackets and braces
+imap <leader>( ()<ESC>i
+imap <leader>[ []<ESC>i
+imap <leader>{ {}<ESC>i
+
 "" Allow backspacing over everything
 set backspace=indent,eol,start
 
