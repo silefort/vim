@@ -48,6 +48,9 @@ set showcmd
 "" Show the lines number
 set number
 
+"" Show relative number lines
+set relativenumber
+
 "" Show the matching paranthesis
 set showmatch
 
@@ -71,6 +74,9 @@ autocmd WinEnter * set cursorline
 "" Informative Status Line
 set statusline=%F%m%r%h%w\ [type=%Y]\ [%p%%]\ [len=%L]
 set laststatus=2 " Always show the statusline on the 2nd last row
+
+"" By default, vim thinks .md is Modula-2.
+autocmd BufNewFile,BufReadPost *.md set filetype=markdown
 
 """""""""""""""""""
 """ Insert Options
@@ -140,6 +146,12 @@ map <Leader>b :bn<cr>
 
 "" Save as Sudo
 cmap w!! w !sudo tee % >/dev/null
+
+"" Edit my vimrc in a new vertical split
+nnoremap <leader>ev <C-w><C-v><C-l>:e ~/.custom_vim/vimrc<cr>
+
+"" Create an .un file with my undos
+set undofile
 
 """""""""""""""""""
 """" Pathogen
