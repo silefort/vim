@@ -27,9 +27,13 @@ nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
+"" Create a new vertical split easily
+nnoremap <leader>w <C-w>v<C-w>l
+
 " Use shift-H and shift-L for move to beginning/end
 nnoremap H 0
 nnoremap L $
+
 
 """""""""""""""""""
 """ Display Options
