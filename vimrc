@@ -42,6 +42,9 @@ nnoremap L $
 "" Syntaxic coloration
 syntax on
 
+"" Plugin related (used for NerdCommenter)
+filetype plugin on
+
 "" Show the current command (like 2dd)
 set showcmd
 
