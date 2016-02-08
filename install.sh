@@ -12,3 +12,4 @@ cd ~/.custom_vim/bundle
 git clone https://github.com/scrooloose/nerdtree.git
 git clone https://github.com/christoomey/vim-tmux-navigator.git
 git clone https://github.com/scrooloose/nerdcommenter.git
+git clone https://github.com/plasticboy/vim-markdown.git
