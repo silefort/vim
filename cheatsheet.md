@@ -59,3 +59,7 @@
 ## Plugins related
 ### NERDTree
     <C - n> # Toggle NerdTree
+
+### vim-markdown
+    <leader>h+ # Increase Header
+    <leader>h- # Decrease Header
