@@ -194,3 +194,6 @@ map <Leader>h+ :HeaderIncrease<CR>
 
 "" Decrease header
 map <Leader>h- :HeaderDecrease<CR>
+
+"" Header
+map <Leader>h I#<SPACE><ESC>$
