@@ -125,6 +125,9 @@ nmap Y y$
 nnoremap <silent> <leader>d "_d
 vnoremap <silent> <leader>d "_d
 
+" s to split
+nmap s i<CR><ESC>
+
 """""""""""""""""""
 """" Buffer Options
 """""""""""""""""""
