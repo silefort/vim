@@ -33,6 +33,10 @@ nnoremap <leader>w <C-w>v<C-w>l
 "" space for W
 nnoremap <SPACE> W
 
+"" Search and Focus
+nnoremap n nzz
+nnoremap N Nzz
+
 """""""""""""""""""
 """ Display Options
 """""""""""""""""""
