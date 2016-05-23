@@ -127,6 +127,9 @@ nmap Y y$
 nnoremap <silent> <leader>d "_d
 vnoremap <silent> <leader>d "_d
 
+"" s to split the current line
+nmap s i<CR><ESC>
+
 """""""""""""""""""
 """" Buffer Options
 """""""""""""""""""
