@@ -30,10 +30,12 @@ nnoremap <C-l> <C-w>l
 "" Create a new vertical split easily
 nnoremap <leader>w <C-w>v<C-w>l
 
-" Use shift-H and shift-L for move to beginning/end
-nnoremap H 0
-nnoremap L $
+"" space for W
+nnoremap <SPACE> W
 
+"" Search and Focus
+nnoremap n nzz
+nnoremap N Nzz
 
 """""""""""""""""""
 """ Display Options
@@ -200,3 +202,20 @@ map <Leader>h- :HeaderDecrease<CR>
 
 "" Header
 map <Leader>h I#<SPACE><ESC>$
+
+
+"""""""""""""""""""
+""" Lightline
+"""""""""""""""""""
+let g:lightline = {
+      \ 'active': {
+      \   'left': [ [ 'mode', 'paste' ],
+      \             [ 'fugitive', 'readonly', 'filename', 'modified' ] ]
+      \ },
+      \ 'component': {
+      \   'fugitive': '%{exists("*fugitive#head")?fugitive#head():""}'
+      \ },
+      \ 'component_visible_condition': {
+      \   'fugitive': '(exists("*fugitive#head") && ""!=fugitive#head())'
+      \ },
+      \ }
