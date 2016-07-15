@@ -219,3 +219,9 @@ let g:lightline = {
       \   'fugitive': '(exists("*fugitive#head") && ""!=fugitive#head())'
       \ },
       \ }
+
+"""""""""""""""""""
+""" Vim-Notes
+"""""""""""""""""""
+:let g:notes_directories = ['~/Google Drive/Notes']
+:let g:notes_suffix = '.markdown'
