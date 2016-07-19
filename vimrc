@@ -184,8 +184,8 @@ execute pathogen#infect()
 map <C-n> :NERDTreeToggle<CR>
 
 " Open a NERDTree automatically when vim starts up if no files were specified
-autocmd StdinReadPre * let s:std_in=1
-autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+" autocmd StdinReadPre * let s:std_in=1
+" autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
 " Close vim if the only window left open is a NERDTree
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
@@ -225,3 +225,9 @@ let g:lightline = {
 """""""""""""""""""
 :let g:notes_directories = ['~/Google Drive/Notes']
 :let g:notes_suffix = '.markdown'
+
+
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | RecentNotes | endif
+
+let g:notes_tagsindex = '~/Google Drive/Notes/tags'
