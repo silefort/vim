@@ -227,7 +227,10 @@ let g:lightline = {
 :let g:notes_suffix = '.markdown'
 
 
+"" Launch vim-notes 'recent notes' at startup
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | RecentNotes | endif
 
+"" Setup files to store index and tags
 let g:notes_tagsindex = '~/Google Drive/Notes/tags'
+let g:notes_indexfile = '~/Google Drive/Notes/index'
