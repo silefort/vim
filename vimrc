@@ -157,6 +157,14 @@ nnoremap <leader>ev <C-w><C-v><C-l>:e ~/.custom_vim/vimrc<cr>
 "" Create an .un file with my undos
 set undofile
 
+"" Folding methods
+"" Fold on indentation
+set foldmethod=indent
+"" Fold max level
+set foldnestmax=2
+"" Nothing folded on startup
+set foldlevelstart=99
+
 """""""""""""""""""
 """" Pathogen
 """""""""""""""""""
