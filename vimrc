@@ -33,6 +33,10 @@ nnoremap <leader>w <C-w>v<C-w>l
 "" space for W
 nnoremap <SPACE> W
 
+"" Search and Focus
+nnoremap n nzz
+nnoremap N Nzz
+
 """""""""""""""""""
 """ Display Options
 """""""""""""""""""
@@ -125,7 +129,7 @@ nmap Y y$
 nnoremap <silent> <leader>d "_d
 vnoremap <silent> <leader>d "_d
 
-" s to split
+"" s to split the current line
 nmap s i<CR><ESC>
 
 """""""""""""""""""
@@ -188,8 +192,8 @@ execute pathogen#infect()
 map <C-n> :NERDTreeToggle<CR>
 
 " Open a NERDTree automatically when vim starts up if no files were specified
-autocmd StdinReadPre * let s:std_in=1
-autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+" autocmd StdinReadPre * let s:std_in=1
+" autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
 " Close vim if the only window left open is a NERDTree
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
@@ -223,3 +227,18 @@ let g:lightline = {
       \   'fugitive': '(exists("*fugitive#head") && ""!=fugitive#head())'
       \ },
       \ }
+
+"""""""""""""""""""
+""" Vim-Notes
+"""""""""""""""""""
+:let g:notes_directories = ['~/Google Drive/Notes']
+:let g:notes_suffix = '.markdown'
+
+
+"" Launch vim-notes 'recent notes' at startup
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | RecentNotes | endif
+
+"" Setup files to store index and tags
+let g:notes_tagsindex = '~/Google Drive/Notes/tags'
+let g:notes_indexfile = '~/Google Drive/Notes/index'
