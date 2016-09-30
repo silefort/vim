@@ -231,7 +231,7 @@ let g:lightline = {
 """""""""""""""""""
 """ Vim-Notes
 """""""""""""""""""
-:let g:notes_directories = ['~/Google Drive/Notes']
+:let g:notes_directories = ['~/Google Drive/Notes/INBOX', '~/Google Drive/Notes']
 :let g:notes_suffix = '.markdown'
 
 
@@ -242,3 +242,5 @@ autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | RecentNotes | endif
 "" Setup files to store index and tags
 let g:notes_tagsindex = '~/Google Drive/Notes/tags'
 let g:notes_indexfile = '~/Google Drive/Notes/index'
+
+let g:notes_smart_quotes = 0
