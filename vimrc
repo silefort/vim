@@ -144,6 +144,7 @@ map <Leader>s :w<cr>
 
 "" Next Buffer
 map <Leader>b :bn<cr>
+map <Leader>B :bp<cr>
 
 """""""""""""""""""
 """" Tools Options
