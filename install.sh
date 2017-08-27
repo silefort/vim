@@ -19,4 +19,5 @@ git clone https://github.com/itchyny/lightline.vim.git
 git clone https://github.com/tpope/vim-fugitive.git
 git clone https://github.com/xolox/vim-notes.git
 git clone https://github.com/xolox/vim-misc.git
+npm install -g livedown
 git clone https://github.com/shime/vim-livedown.git
