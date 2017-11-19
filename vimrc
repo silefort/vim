@@ -54,7 +54,7 @@ set showcmd
 set number
 
 "" Show relative number lines
-" set relativenumber
+"" set relativenumber
 
 "" Show the matching paranthesis
 set showmatch
