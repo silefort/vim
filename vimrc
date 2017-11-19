@@ -54,7 +54,7 @@ set showcmd
 set number
 
 "" Show relative number lines
-set relativenumber
+" set relativenumber
 
 "" Show the matching paranthesis
 set showmatch
@@ -245,3 +245,6 @@ let g:notes_tagsindex = '~/Google Drive/Notes/tags'
 let g:notes_indexfile = '~/Google Drive/Notes/index'
 
 let g:notes_smart_quotes = 0
+
+"" Remove syntax coloration for notes (too slow)
+autocmd FileType notes setlocal syntax=off
