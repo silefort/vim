@@ -60,7 +60,8 @@ set number
 set showmatch
 
 "" Dark background
-set background=dark
+"" set background=dark
+set background=light
 
 "" Highlight all search matches
 set hlsearch
@@ -90,9 +91,9 @@ autocmd BufNewFile,BufReadPost *.md set filetype=markdown
 " insert spaces for tab (to insert real tabs use <C - V><tab>
 set expandtab
 
-" one tab = 4 spaces
-set tabstop=4
-set shiftwidth=4
+" one tab = 2 spaces
+set tabstop=2
+set shiftwidth=2
 
 "" Not case sensitive for /search
 set ignorecase
@@ -164,11 +165,11 @@ set undofile
 
 "" Folding methods
 "" Fold on indentation
-set foldmethod=indent
+"set foldmethod=indent
 "" Fold max level
-set foldnestmax=2
+"set foldnestmax=2
 "" Nothing folded on startup
-set foldlevelstart=99
+"set foldlevelstart=99
 
 """""""""""""""""""
 """" Pathogen
@@ -248,3 +249,8 @@ let g:notes_smart_quotes = 0
 
 "" Remove syntax coloration for notes (too slow)
 autocmd FileType notes setlocal syntax=off
+
+"""""""""""""""""""
+""" Solarized
+"""""""""""""""""""
+colorscheme solarized
