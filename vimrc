@@ -254,3 +254,9 @@ autocmd FileType notes setlocal syntax=off
 """ Solarized
 """""""""""""""""""
 colorscheme solarized
+
+"""""""""""""""""""
+""" Vim Indent Guides
+"""""""""""""""""""
+"" Show indent guides by default
+let g:indent_guides_enable_on_vim_startup = 1
