@@ -37,6 +37,9 @@ nnoremap <SPACE> W
 nnoremap n nzz
 nnoremap N Nzz
 
+"" Set 7 lines to the cursor when moving vertically using j/k
+set so=7
+
 """""""""""""""""""
 """ Display Options
 """""""""""""""""""
@@ -46,6 +49,7 @@ syntax on
 
 "" Plugin related (used for NerdCommenter)
 filetype plugin on
+filetype indent on
 
 "" Show the current command (like 2dd)
 set showcmd
@@ -83,6 +87,9 @@ set laststatus=2 " Always show the statusline on the 2nd last row
 
 "" By default, vim thinks .md is Modula-2.
 autocmd BufNewFile,BufReadPost *.md set filetype=markdown
+
+"" Add a bit extra margin to the left
+set foldcolumn=1
 
 """""""""""""""""""
 """ Insert Options
@@ -142,10 +149,6 @@ set hidden
 
 "" Map write to leader s
 map <Leader>s :w<cr>
-
-"" Next Buffer
-map <Leader>b :bn<cr>
-map <Leader>B :bp<cr>
 
 """""""""""""""""""
 """" Tools Options
@@ -260,3 +263,9 @@ colorscheme solarized
 """""""""""""""""""
 "" Show indent guides by default
 let g:indent_guides_enable_on_vim_startup = 1
+
+
+"""""""""""""""""""
+""" Vim Bufexplorer
+"""""""""""""""""""
+map <leader>b :BufExplorerHorizontalSplit<cr>
