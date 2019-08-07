@@ -57,14 +57,10 @@ set showcmd
 "" Show the lines number
 set number
 
-"" Show relative number lines
-"" set relativenumber
-
 "" Show the matching paranthesis
 set showmatch
 
 "" Dark background
-"" set background=dark
 set background=light
 
 "" Highlight all search matches
@@ -90,6 +86,9 @@ autocmd BufNewFile,BufReadPost *.md set filetype=markdown
 
 "" Add a bit extra margin to the left
 set foldcolumn=1
+
+"" Do not show mode (like -- INSERTION -- ) - it is already shown by the lightline plugin
+set noshowmode
 
 """""""""""""""""""
 """ Insert Options
@@ -221,6 +220,7 @@ map <Leader>h I#<SPACE><ESC>$
 """ Lightline
 """""""""""""""""""
 let g:lightline = {
+      \ 'colorscheme': 'solarized',
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ],
       \             [ 'fugitive', 'readonly', 'filename', 'modified' ] ]
