@@ -4,6 +4,7 @@
 """" Nagivation Options
 """""""""""""""""""
 
+"" added a difference
 "" Set Mapleader
 let mapleader = ","
 
