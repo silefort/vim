@@ -84,6 +84,7 @@ set laststatus=2 " Always show the statusline on the 2nd last row
 
 "" By default, vim thinks .md is Modula-2.
 autocmd BufNewFile,BufReadPost *.md set filetype=markdown
+autocmd BufNewFile,BufReadPost *.txt set filetype=markdown
 
 "" Add a bit extra margin to the left
 set foldcolumn=1
@@ -168,7 +169,7 @@ set undofile
 
 "" Folding methods
 "" Fold on indentation
-"set foldmethod=indent
+"set foldmethod=expr
 "" Fold max level
 "set foldnestmax=2
 "" Nothing folded on startup
@@ -265,8 +266,7 @@ colorscheme solarized
 "" Show indent guides by default
 let g:indent_guides_enable_on_vim_startup = 1
 
-
 """""""""""""""""""
-""" Vim Bufexplorer
+""" Vim CtrlP
 """""""""""""""""""
-map <leader>b :BufExplorerHorizontalSplit<cr>
+map <leader>b :CtrlPBuffer<cr>

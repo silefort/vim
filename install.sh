@@ -25,6 +25,5 @@ git clone https://github.com/Raimondi/delimitMate.git
 npm install -g livedown
 git clone https://github.com/shime/vim-livedown.git
 git clone https://github.com/nelstrom/vim-markdown-folding.git
-git clone https://github.com/vim-scripts/bufexplorer.zip
 git clone https://github.com/yegappan/mru
 git clone https://github.com/vim-scripts/nginx.vim.git
