@@ -151,6 +151,10 @@ set hidden
 "" Map write to leader s
 map <Leader>s :w<cr>
 
+"" Move Around Buffers
+nnoremap <Tab> :bnext<CR>
+nnoremap <S-Tab> :bprevious<CR>
+
 """""""""""""""""""
 """" Tools Options
 """""""""""""""""""
@@ -266,7 +270,3 @@ colorscheme solarized
 "" Show indent guides by default
 let g:indent_guides_enable_on_vim_startup = 1
 
-"""""""""""""""""""
-""" Vim CtrlP
-"""""""""""""""""""
-map <leader>b :CtrlPBuffer<cr>
