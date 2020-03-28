@@ -154,6 +154,7 @@ map <Leader>s :w<cr>
 "" Move Around Buffers
 nnoremap <Tab> :bnext<CR>
 nnoremap <S-Tab> :bprevious<CR>
+nnoremap <Leader>q :bd %<CR>
 
 """""""""""""""""""
 """" Tools Options
