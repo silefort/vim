@@ -271,3 +271,11 @@ colorscheme solarized
 "" Show indent guides by default
 let g:indent_guides_enable_on_vim_startup = 1
 
+
+"""""""""""""""""""
+""" Vim Yankstack
+"""""""""""""""""""
+""" It allows you to yank and delete things without worrying about losing the
+""" text that you yanked previously
+nmap <leader>p <Plug>yankstack_substitute_older_paste
+nmap <leader>P <Plug>yankstack_substitute_newer_paste
