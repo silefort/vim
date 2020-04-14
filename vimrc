@@ -154,7 +154,7 @@ map <Leader>s :w<cr>
 "" Move Around Buffers
 nnoremap <Tab> :bnext<CR>
 nnoremap <S-Tab> :bprevious<CR>
-nnoremap <Leader>q :bd %<CR>
+nnoremap <Leader>q :NERDTreeClose<CR>:bd %<CR>
 
 """""""""""""""""""
 """" Tools Options
@@ -203,11 +203,11 @@ execute pathogen#infect()
 map <C-n> :NERDTreeToggle<CR>
 
 " Open a NERDTree automatically when vim starts up if no files were specified
-" autocmd StdinReadPre * let s:std_in=1
-" autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
 " Close vim if the only window left open is a NERDTree
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+" autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
 """""""""""""""""""
 """ Vim-Markdown
