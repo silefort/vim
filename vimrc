@@ -5,7 +5,6 @@
 "" Set Mapleader
 let mapleader = ","
 
-
 """""""""""""""""""
 """ Display Options
 """""""""""""""""""
@@ -36,7 +35,7 @@ set hlsearch
 set incsearch
 
 "" Clean the search highlights
-nmap <silent> ,/ :nohlsearch<CR>
+nmap <silent> <leader>/ :nohlsearch<CR>
 
 "" Only have cursorline in current Window (TODO)
 set cursorline
@@ -56,6 +55,9 @@ set foldcolumn=1
 
 "" Do not show mode (like -- INSERTION -- ) - it is already shown by the lightline plugin
 set noshowmode
+
+"" Toggle show Number ( for copy paste )
+nnoremap <leader>n :set number!<CR>
 
 """""""""""""""""""
 """ Nagivation Options
@@ -162,6 +164,9 @@ set undofile
 " Toggle paste mode on and off:
 map <leader>pp :setlocal paste!<cr>
 
+" Quickly open a markdown buffer for scribble
+map <leader>x :e ~/buffer.md<cr>
+
 """""""""""""""""""
 """" Pathogen
 """""""""""""""""""
@@ -195,21 +200,26 @@ let NERDTreeMinimalUI=1
 let NERDTreeWinPos="right"
 
 """""""""""""""""""
-
 """ Lightline
 """""""""""""""""""
 let g:lightline = {
       \ 'colorscheme': 'solarized',
       \ 'active': {
-      \   'left': [ [ 'mode', 'paste' ],
-      \             [ 'fugitive', 'readonly', 'filename', 'modified' ] ]
+      \   'left': [ ['mode', 'paste'],['fugitive'],['readonly', 'absolutepath', 'modified'] ],
+      \   'right': [ [ 'lineinfo' ], ['percent'],['filetype'] ]
       \ },
       \ 'component': {
-      \   'fugitive': '%{exists("*fugitive#head")?fugitive#head():""}'
+      \   'readonly': '%{&filetype=="help"?"":&readonly?"RO":""}',
+      \   'modified': '%{&filetype=="help"?"":&modified?"Modified":&modifiable?"":"-"}',
+      \   'fugitive': '%{exists("*FugitiveHead")?FugitiveHead():""}'
       \ },
       \ 'component_visible_condition': {
-      \   'fugitive': '(exists("*fugitive#head") && ""!=fugitive#head())'
+      \   'readonly': '(&filetype!="help"&& &readonly)',
+      \   'modified': '(&filetype!="help"&&(&modified||!&modifiable))',
+      \   'fugitive': '(exists("*FugitiveHead") && ""!=FugitiveHead())'
       \ },
+      \ 'separator': { 'left': ' ', 'right': ' ' },
+      \ 'subseparator': { 'left': '|', 'right': ' ' }
       \ }
 
 """""""""""""""""""

@@ -11,6 +11,7 @@ curl -LSso ~/.custom_vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
 cd ~/.custom_vim/bundle
 
 git clone https://github.com/Raimondi/delimitMate.git
+git clone https://tpope.io/vim/fugitive.git
 git clone https://github.com/altercation/vim-colors-solarized.git
 git clone https://github.com/christoomey/vim-tmux-navigator.git
 git clone https://github.com/fholgado/minibufexpl.vim.git
