@@ -223,5 +223,6 @@ let g:indent_guides_enable_on_vim_startup = 1
 """""""""""""""""""
 "" Display the Mini Buffer Explorer on the Left
 let g:miniBufExplVSplit = 20   " column width in chars
-let g:miniBufExplBuffersNeeded = 1
+let g:miniBufExplorerAutoStart = 0
 let g:miniBufExplShowBufNumbers = 0
+nnoremap <C-b> :MBEToggle<CR>:MBEFocus<CR>
