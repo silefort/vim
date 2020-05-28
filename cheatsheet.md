@@ -55,7 +55,6 @@
     
 ## Files
     
-
 ## Plugins related
 ### NERDTree
     <C - n> # Toggle NerdTree
@@ -63,3 +62,6 @@
 ### vim-markdown
     <leader>h+ # Increase Header
     <leader>h- # Decrease Header
+
+### Mini Buf Explorer
+    <C - b> # Toggle Mini Buf Explorer
