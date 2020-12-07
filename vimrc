@@ -236,3 +236,9 @@ let g:miniBufExplVSplit = 20   " column width in chars
 let g:miniBufExplorerAutoStart = 0
 let g:miniBufExplShowBufNumbers = 0
 nnoremap <C-b> :MBEToggle<CR>:MBEFocus<CR>
+
+"""""""""""""""""""
+""" Hard Time
+"""""""""""""""""""
+let g:hardtime_default_on = 1
+nnoremap <leader>h :HardTimeToggle<CR>
