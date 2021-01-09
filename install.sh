@@ -25,3 +25,4 @@ git clone https://github.com/scrooloose/nerdtree.git
 git clone https://github.com/Xuyuanp/nerdtree-git-plugin.git
 npm install -g livedown
 git clone https://github.com/shime/vim-livedown.git
+git clone https://github.com/takac/vim-hardtime.git

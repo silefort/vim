@@ -254,7 +254,6 @@ nnoremap <C-b> :MBEToggle<CR>:MBEFocus<CR>
 """""""""""""""""""
 let g:SimpylFold_docstring_preview=1
 
-
 """""""""""""""""""
 """ Python Specifics
 """""""""""""""""""
@@ -270,3 +269,9 @@ au BufNewFile,BufRead *.py
     \ set fileformat=unix
 
 "au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
+
+"""""""""""""""""""
+""" Hard Time
+"""""""""""""""""""
+let g:hardtime_default_on = 1
+nnoremap <leader>h :HardTimeToggle<CR>
