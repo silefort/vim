@@ -59,6 +59,10 @@ set noshowmode
 "" Toggle show Number ( for copy paste )
 nnoremap <leader>n :set number!<CR>
 
+"" Enable folding
+set foldmethod=indent
+set foldlevel=99
+
 """""""""""""""""""
 """ Nagivation Options
 """""""""""""""""""
@@ -95,6 +99,10 @@ nnoremap N Nzz
 
 "" Set 7 lines to the cursor when moving vertically using j/k
 set so=7
+
+"" Navigate around pargraphs with - and +
+map + }j
+map - 2{j
 
 """""""""""""""""""
 """ Insert Options
@@ -199,6 +207,10 @@ let NERDTreeShowHidden=1
 let NERDTreeMinimalUI=1
 let NERDTreeWinPos="right"
 
+let NERDTreeIgnore=['\.pyc$', '\~$'] "ignore files in NERDTree
+let NERDTreeIgnore=['\.swp$', '\~$'] "ignore files in NERDTree
+
+
 """""""""""""""""""
 """ Lightline
 """""""""""""""""""
@@ -236,3 +248,25 @@ let g:miniBufExplVSplit = 20   " column width in chars
 let g:miniBufExplorerAutoStart = 0
 let g:miniBufExplShowBufNumbers = 0
 nnoremap <C-b> :MBEToggle<CR>:MBEFocus<CR>
+
+"""""""""""""""""""
+""" SimplyFold
+"""""""""""""""""""
+let g:SimpylFold_docstring_preview=1
+
+
+"""""""""""""""""""
+""" Python Specifics
+"""""""""""""""""""
+" Follow PEP8 Indentation
+
+au BufNewFile,BufRead *.py
+    \ set tabstop=4
+    \ set softtabstop=4
+    \ set shiftwidth=4
+    \ set textwidth=79
+    \ set expandtab
+    \ set autoindent
+    \ set fileformat=unix
+
+"au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
