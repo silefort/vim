@@ -77,9 +77,10 @@ noremap   <Down>   <NOP>
 noremap   <Left>   <NOP>
 noremap   <Right>  <NOP>
 
-"" jj to escape + leave the cursor
+"" jj or jk to escape + leave the cursor
 "" where it is (don't go one column back )
-imap jj <ESC>l
+inoremap jj <ESC>l
+inoremap jk <ESC>l
 
 "" Easy split navigation
 nnoremap <C-h> <C-w>h
