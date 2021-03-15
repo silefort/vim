@@ -139,6 +139,12 @@ set backspace=indent,eol,start
 "" Make Y act like C and D (copy till the end of the line)
 nmap Y y$
 
+"" Insert current filename (without extension)
+:inoremap <Leader>fn <C-R>=expand("%:t:r")<CR>
+
+"" Insert current date
+:inoremap <Leader>cd <C-R>=strftime('%Y-%m-%d')<CR>
+
 """""""""""""""""""
 """" Buffer Options
 """""""""""""""""""
@@ -166,6 +172,9 @@ cmap w!! w !sudo tee % >/dev/null
 
 "" Edit my vimrc in a new vertical split
 nnoremap <leader>ev <C-w><C-v><C-l>:e ~/.custom_vim/vimrc<cr>
+
+"" Reload my new vim conf
+map <leader>rv :so ~/.custom_vim/vimrc<CR>
 
 "" Create an .un file with my undos
 set undofile
@@ -274,5 +283,13 @@ au BufNewFile,BufRead *.py
 """""""""""""""""""
 """ Hard Time
 """""""""""""""""""
-let g:hardtime_default_on = 1
+let g:hardtime_default_on = 0
 nnoremap <leader>h :HardTimeToggle<CR>
+"
+"""""""""""""""""""
+""" Vim Wiki
+"""""""""""""""""""
+let g:vimwiki_list = [{'path': '~/Git/zk'}]
+"let g:vimwiki_key_mappings = {'links': 0}
+nmap <Leader>wtl :0r !cat ~/Git/zk/tpt/lit.template<CR>
+nmap <Leader>wtp :0r !cat ~/Git/zk/tpt/perm.template<CR>
