@@ -289,7 +289,7 @@ nnoremap <leader>h :HardTimeToggle<CR>
 """""""""""""""""""
 """ Vim Wiki
 """""""""""""""""""
-let g:vimwiki_list = [{'path': '~/Git/zk'}]
+let g:vimwiki_list = [{'path': '~/Git/zk', 'auto_tags':1}]
 "let g:vimwiki_key_mappings = {'links': 0}
-nmap <Leader>wtl :0r !cat ~/Git/zk/tpt/lit.template<CR>
-nmap <Leader>wtp :0r !cat ~/Git/zk/tpt/perm.template<CR>
+nmap <Leader>wtl :r !cat ~/Git/zk/tpt/lit.template<CR>
+nmap <Leader>wtp :r !cat ~/Git/zk/tpt/perm.template<CR>
