@@ -88,8 +88,11 @@ nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
+"" Open new vertical split on the right side
+set splitright
+
 "" Create a new vertical split easily
-nnoremap <leader>w <C-w>v<C-w>l
+nnoremap <leader>vs <C-w>v<C-w>l
 
 "" space for W
 nnoremap <SPACE> W
@@ -294,3 +297,5 @@ let g:vimwiki_list = [{'path': '~/Git/zk', 'auto_tags':1}]
 nmap <Leader>wtl :r !cat ~/Git/zk/tpt/lit.template<CR>
 nmap <Leader>wtp :r !cat ~/Git/zk/tpt/perm.template<CR>
 nmap <Leader>wgp :!git add *.wiki && git commit -m "vim autocommit" && git push
+nmap <Leader>wll :vsplit Literature\ Notes.wiki<CR>gg/Generated<CR>,/
+nmap <Leader>wlp :vsplit Permanent\ Notes.wiki<CR>gg/Generated<CR>,/
