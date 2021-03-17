@@ -293,3 +293,4 @@ let g:vimwiki_list = [{'path': '~/Git/zk', 'auto_tags':1}]
 "let g:vimwiki_key_mappings = {'links': 0}
 nmap <Leader>wtl :r !cat ~/Git/zk/tpt/lit.template<CR>
 nmap <Leader>wtp :r !cat ~/Git/zk/tpt/perm.template<CR>
+nmap <Leader>wgp :!git add *.wiki && git commit -m "vim autocommit" && git push
