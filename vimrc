@@ -81,6 +81,7 @@ noremap   <Right>  <NOP>
 "" where it is (don't go one column back )
 inoremap jj <ESC>l
 inoremap jk <ESC>l
+inoremap tt <ESC>l
 
 "" Easy split navigation
 nnoremap <C-h> <C-w>h
@@ -147,6 +148,7 @@ nmap Y y$
 
 "" Insert current date
 :inoremap <Leader>cd <C-R>=strftime('%Y-%m-%d')<CR>
+:inoremap <Leader>ct <C-R>=strftime('%Y%m%d%H%M%S')<CR>
 
 """""""""""""""""""
 """" Buffer Options
@@ -292,10 +294,10 @@ nnoremap <leader>h :HardTimeToggle<CR>
 """""""""""""""""""
 """ Vim Wiki
 """""""""""""""""""
-let g:vimwiki_list = [{'path': '~/Git/zk', 'auto_tags':1}]
+let g:vimwiki_list = [{'path': '~/Git/zk', 'auto_tags':1, 'ext': '.md'}]
 "let g:vimwiki_key_mappings = {'links': 0}
 nmap <Leader>wtl :r !cat ~/Git/zk/tpt/lit.template<CR>
 nmap <Leader>wtp :r !cat ~/Git/zk/tpt/perm.template<CR>
-nmap <Leader>wgp :!git add *.wiki && git commit -m "vim autocommit" && git push
-nmap <Leader>wll :vsplit Literature\ Notes.wiki<CR>gg/Generated<CR>,/
-nmap <Leader>wlp :vsplit Permanent\ Notes.wiki<CR>gg/Generated<CR>,/
+nmap <Leader>wgp :!git add *.md && git add Images/*.png && git commit -m "vim autocommit" && git push
+nmap <Leader>wll :vsplit Literature\ Notes.md<CR>:VimwikiGeneratedLinks L*<CR>gg/Generated<CR>,/
+nmap <Leader>wlp :vsplit Permanent\ Notes.md<CR>:VimwikiGenerateLinks P*<CR>gg/Generated<CR>,/
