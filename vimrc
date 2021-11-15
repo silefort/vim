@@ -68,20 +68,20 @@ set foldlevel=99
 """""""""""""""""""
 
 "" Disable Arrows for all mode
-inoremap  <Up>     <NOP>
-inoremap  <Down>   <NOP>
-inoremap  <Left>   <NOP>
-inoremap  <Right>  <NOP>
-noremap   <Up>     <NOP>
-noremap   <Down>   <NOP>
-noremap   <Left>   <NOP>
-noremap   <Right>  <NOP>
+"" inoremap  <Up>     <NOP>
+"" inoremap  <Down>   <NOP>
+"" inoremap  <Left>   <NOP>
+"" inoremap  <Right>  <NOP>
+"" noremap   <Up>     <NOP>
+"" noremap   <Down>   <NOP>
+"" noremap   <Left>   <NOP>
+"" noremap   <Right>  <NOP>
 
 "" jj or jk to escape + leave the cursor
 "" where it is (don't go one column back )
 inoremap jj <ESC>l
 inoremap jk <ESC>l
-inoremap tt <ESC>l
+"inoremap aa <ESC>l
 
 "" Easy split navigation
 nnoremap <C-h> <C-w>h
@@ -90,7 +90,9 @@ nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
 "" Open new vertical split on the right side
-set splitright
+"" Open new horizontal split below
+"" set splitright
+set splitbelow
 
 "" Create a new vertical split easily
 nnoremap <leader>vs <C-w>v<C-w>l
@@ -259,7 +261,7 @@ let g:indent_guides_enable_on_vim_startup = 1
 """ Mini Buffer Explorer
 """""""""""""""""""
 "" Display the Mini Buffer Explorer on the Left
-let g:miniBufExplVSplit = 20   " column width in chars
+let g:miniBufExplVSplit = 30   " column width in chars
 let g:miniBufExplorerAutoStart = 0
 let g:miniBufExplShowBufNumbers = 0
 nnoremap <C-b> :MBEToggle<CR>:MBEFocus<CR>
@@ -274,14 +276,14 @@ let g:SimpylFold_docstring_preview=1
 """""""""""""""""""
 " Follow PEP8 Indentation
 
-au BufNewFile,BufRead *.py
-    \ set tabstop=4
-    \ set softtabstop=4
-    \ set shiftwidth=4
-    \ set textwidth=79
-    \ set expandtab
-    \ set autoindent
-    \ set fileformat=unix
+"au BufNewFile,BufRead *.py
+    "\ set tabstop=4
+    "\ set softtabstop=4
+    "\ set shiftwidth=4
+    "\ set textwidth=79
+    "\ set expandtab
+    "\ set autoindent
+    "\ set fileformat=unix
 
 "au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
 
@@ -295,9 +297,18 @@ nnoremap <leader>h :HardTimeToggle<CR>
 """ Vim Wiki
 """""""""""""""""""
 let g:vimwiki_list = [{'path': '~/Git/zk', 'auto_tags':1, 'ext': '.md'}]
+"let g:vimwiki_folding = 'list'
 "let g:vimwiki_key_mappings = {'links': 0}
 nmap <Leader>wtl :r !cat ~/Git/zk/tpt/lit.template<CR>
 nmap <Leader>wtp :r !cat ~/Git/zk/tpt/perm.template<CR>
 nmap <Leader>wgp :!git add *.md && git add Images/*.png && git commit -m "vim autocommit" && git push
 nmap <Leader>wll :vsplit Literature\ Notes.md<CR>:VimwikiGeneratedLinks L*<CR>gg/Generated<CR>,/
 nmap <Leader>wlp :vsplit Permanent\ Notes.md<CR>:VimwikiGenerateLinks P*<CR>gg/Generated<CR>,/
+nmap <Leader>w :VimwikiSplitLink<CR>
+
+"""""""""""""""""""
+""" Vim Maximizer
+"""""""""""""""""""
+nnoremap <leader>z :MaximizerToggle<CR>
+vnoremap <leader>z :MaximizerToggle<CR>gv
+inoremap <leader>z <C-o>:MaximizerToggle<CR>
