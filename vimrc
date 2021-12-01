@@ -91,7 +91,7 @@ nnoremap <C-l> <C-w>l
 
 "" Open new vertical split on the right side
 "" Open new horizontal split below
-"" set splitright
+set splitright
 set splitbelow
 
 "" Create a new vertical split easily
@@ -301,7 +301,7 @@ let g:vimwiki_list = [{'path': '~/Git/zk', 'auto_tags':1, 'ext': '.md'}]
 "let g:vimwiki_key_mappings = {'links': 0}
 nmap <Leader>wtl :r !cat ~/Git/zk/tpt/lit.template<CR>
 nmap <Leader>wtp :r !cat ~/Git/zk/tpt/perm.template<CR>
-nmap <Leader>wgp :!git add *.md && git add Images/*.png && git commit -m "vim autocommit" && git push
+nmap <Leader>wgp :!git add *.md && git add Images/*.png && git add Images/*.jpg && git commit -m "vim autocommit" && git push
 nmap <Leader>wll :vsplit Literature\ Notes.md<CR>:VimwikiGeneratedLinks L*<CR>gg/Generated<CR>,/
 nmap <Leader>wlp :vsplit Permanent\ Notes.md<CR>:VimwikiGenerateLinks P*<CR>gg/Generated<CR>,/
 nmap <Leader>w :VimwikiSplitLink<CR>

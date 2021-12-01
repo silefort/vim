@@ -28,4 +28,5 @@ git clone https://github.com/shime/vim-livedown.git
 git clone https://github.com/takac/vim-hardtime.git
 git clone https://github.com/vimwiki/vimwiki.git
 git clone https://github.com/jremmen/vim-ripgrep.git
+git clone https://github.com/yssl/QFEnter.git
 #git clone https://github.com/junegunn/fzf.vim.git
