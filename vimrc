@@ -312,3 +312,11 @@ nmap <Leader>w :VimwikiSplitLink<CR>
 nnoremap <leader>z :MaximizerToggle<CR>
 vnoremap <leader>z :MaximizerToggle<CR>gv
 inoremap <leader>z <C-o>:MaximizerToggle<CR>
+
+
+"""""""""""""""""""
+""" Vim QFEnter
+"""""""""""""""""""
+let g:qfenter_keymap = {}
+let g:qfenter_keymap.vopen = ['<CR>']
+let g:qfenter_keymap.open = ['<Leader><CR>']
